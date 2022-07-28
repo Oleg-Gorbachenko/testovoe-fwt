@@ -27,7 +27,7 @@ export const getPaintingsData = (): AppThunkType => async dispatch => {
 
     dispatch(setLocations(locations));
   } catch (err: any) {
-    console.error(err.message);
+    throw new Error(err);
   } finally {
     dispatch(isLoading(false));
   }
@@ -43,7 +43,7 @@ export const getCurrentPaintings =
       dispatch(setCurrentPaintings(paintings));
       dispatch(setCurrentPage(+pageNumber));
     } catch (err: any) {
-      console.error(err.message);
+      throw new Error(err);
     } finally {
       dispatch(isLoading(false));
     }
@@ -60,7 +60,7 @@ export const searchPaintingsById =
       dispatch(setPaintingsDescription(paintings));
       dispatch(setCurrentPage(+pageNumber));
     } catch (err: any) {
-      console.error(err.message);
+      throw new Error(err);
     } finally {
       dispatch(isLoading(false));
     }
@@ -77,7 +77,7 @@ export const fetchPaintingsByString =
       dispatch(setPaintingsDescription(paintings));
       dispatch(setCurrentPage(+pageNumber));
     } catch (err: any) {
-      console.error(err.message);
+      throw new Error(err);
     } finally {
       dispatch(isLoading(false));
     }
@@ -99,7 +99,7 @@ export const resetFilter =
       dispatch(setFilterByAuthor(''));
       dispatch(setFilterByLocation(''));
     } catch (err: any) {
-      console.error(err.message);
+      throw new Error(err);
     } finally {
       dispatch(isLoading(false));
     }
