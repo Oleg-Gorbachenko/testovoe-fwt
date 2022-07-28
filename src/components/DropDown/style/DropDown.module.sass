@@ -1,0 +1,129 @@
+@import "src/common/styles/sass/mixins"
+
+.wrapper
+  display: flex
+  flex-wrap: wrap
+
+.dropdownClose
+  @include colors($secondColor, $lightColor)
+  display: flex
+  align-items: center
+  width: 265px
+  height: 45px
+  padding: 5px 10px
+  margin-left: 10px
+  cursor: pointer
+  border: 1px solid $lightColor
+  border-radius: 8px
+  appearance: none
+  overflow: hidden
+  background: url('../../../common/images/selectLight.png') no-repeat 95% 50%, $secondColor
+  @media screen and (min-width: 1024px) and (max-width: 1160px)
+    width: 220px
+  @media screen and (min-width: 767px) and (max-width: 1024px)
+    width: 160px
+    font-size: 13px
+  @media screen and (min-width: 320px) and (max-width: 767px)
+    width: 280px
+    font-size: 14px
+    margin-left: 0
+    margin-top: 10px
+
+.dropdownCloseLight
+  @include colors($lightColor, $secondColor)
+  border: 1px solid rgba(0, 0, 0, 0.3)
+  background: url('../../../common/images/selectDark.png') no-repeat 95% 50%, $lightColor
+
+.dropdownOpen
+  @include colors($secondColor, $lightColor)
+  width: 265px
+  height: 131px
+  border: 1px solid $lightColor
+  border-radius: 8px
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 2
+  @media screen and (min-width: 1160px) and (max-width: 1365px)
+    width: 265px
+    height: 131px
+    right: 30px
+  @media screen and (min-width: 1024px) and (max-width: 1160px)
+    width: 220px
+    height: 205px
+    right: 2px
+  @media screen and (min-width: 767px) and (max-width: 1024px)
+    width: 160px
+    height: 205px
+    font-size: 13px
+    right: 32px
+  @media screen and (width: 767px)
+    width: 280px
+    height: 131px
+    top: 178px
+    left: 116px
+  @media screen and (min-width: 320px) and (max-width: 766px)
+    width: 280px
+    height: 131px
+    font-size: 14px
+    top: 180px
+    left: 8px
+
+.dropdownOpenLight
+  @include colors($lightColor, $secondColor)
+  border: 1px solid $darkColor
+
+.title
+  background: url('../../../common/images/selectLight.png') no-repeat 95% 50%
+  padding: 14px 10px
+  font-family: 'Roboto', sans-serif
+  cursor: pointer
+
+.titleLight
+  background: url('../../../common/images/selectDark.png') no-repeat 95% 50%
+
+.inputWrapper
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  align-self: center
+  width: 265px
+  height: 95px
+  padding: 0 21px
+  @media screen and (min-width: 768px) and (max-width: 1160px)
+    flex-direction: column
+    justify-content: space-between
+    height: 70%
+    padding-top: 15px
+
+.inputDark
+  width: 95px
+  height: 45px
+  background: $lightColor
+  border-radius: 8px
+  padding: 15px
+  appearance: none
+  @media screen and (min-width: 1024px) and (max-width: 1160px)
+    width: 110px
+
+.inputLight
+  background: #EFEFEF
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.dash
+  width: 12px
+  margin: 0 10px
+  border: 1px solid $lightColor
+  background: $lightColor
+
+.dashLight
+  border: 1px solid $darkColor
+  background: $darkColor
+

@@ -1,0 +1,44 @@
+@import "src/common/styles/sass/mixins"
+*
+  background: transparent
+  border: 0
+  box-sizing: border-box
+  font-family: 'Roboto', sans-serif
+  font-size: 14px
+  margin: 0
+  outline: 0
+  padding: 0
+  text-decoration: none
+  vertical-align: baseline
+
+header, main, footer, article, aside, hgroup, menu, nav, section, details, figcaption, figure
+  display: block
+
+.App
+  @include colors($darkColor, $lightColor)
+  height: 100%
+  width: 100%
+  min-height: 100vh
+
+.AppLight
+  @include colors($lightColor, $darkColor)
+  height: 100%
+  min-height: 100vh
+
+h1
+  font-family: inherit
+  font-size: 26px
+  font-weight: 600
+  line-height: 39px
+
+h2
+  font-family: inherit
+  font-style: normal
+  font-weight: 700
+  font-size: 18px
+  line-height: 20px
+  text-transform: capitalize
+  padding: 5px 10px
+
+b
+  font-weight: bold

@@ -1,0 +1,63 @@
+@import "src/common/styles/sass/mixins"
+
+.select
+  text-overflow: ellipsis
+  width: 265px
+  height: 45px
+  padding: 5px 10px
+  cursor: pointer
+  border: 1px solid $lightColor
+  border-radius: 8px
+  color: $lightColor
+  appearance: none
+  overflow: hidden
+  background: url('../../../common/images/selectLight.png') no-repeat 95% 50%, $secondColor
+  @media screen and (min-width: 1024px) and (max-width: 1160px)
+    width: 220px
+  @media screen and (min-width: 767px) and (max-width: 1024px)
+    width: 160px
+    font-size: 13px
+  @media screen and (min-width: 320px) and (max-width: 767px)
+    width: 280px
+    font-size: 14px
+    margin-bottom: 5px
+
+.selectLight
+  appearance: none
+  overflow: hidden
+  color: $darkColor
+  background: url('../../../common/images/selectDark.png') no-repeat 95% 50%, $lightColor
+  border: 1px solid rgba(0, 0, 0, 0.3)
+
+.selectLight:focus
+  border: 1px solid $darkColor
+
+.option
+  background: $secondColor
+  font-size: 16px
+  @media screen and (min-width: 1024px) and (max-width: 1160px)
+    font-size: 16px
+    height: 20px
+
+.option:checked
+  background: #262222
+
+.optionLight
+  background: $lightColor
+
+.optionLight:checked
+  background: #A29999
+
+.delImg
+  position: relative
+  left: 230px
+  top: 17px
+  @media screen and (min-width: 1024px) and (max-width: 1160px)
+    left: 190px
+    top: 0
+  @media screen and (min-width: 768px) and (max-width: 1024px)
+    left: 135px
+    top: 0
+  @media screen and (min-width: 320px) and (max-width: 767px)
+    left: 95px
+    top: 26px
